@@ -1,2 +1,2 @@
-# Drawords
+# Drawerds
 Fun word randomizer

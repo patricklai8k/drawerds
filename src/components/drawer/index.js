@@ -15,12 +15,14 @@ const drawWord = (words, setWords) => () => {
 const Drawer = () => {
   const { words, setWords } = useContext(WordsContext);
   return (
-    <button className="drawer_container" style={{ backgroundImage: `url(${bg_tile})` }}>
+    <div className="drawerButton"
+      style={{ backgroundImage: `url(${bg_tile})` }}
+      onClick={drawWord(words, setWords)}>
       <div className="drawer">
-        <div className="drawer_handle" onClick={drawWord(words, setWords)}></div>
+        <div className="drawer_handle"></div>
         <div>{showWord}</div>
       </div>
-    </button>
+    </div>
   );
 }
   

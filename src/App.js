@@ -1,4 +1,4 @@
-import React, { Component, useState, useMemo } from 'react';
+import React, { useState, useMemo } from 'react';
 import './App.css';
 import Drawer from './components/drawer';
 import AddWord from './components/addWord';

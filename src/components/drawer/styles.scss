@@ -1,0 +1,27 @@
+.drawer_container {
+  padding: 10px 20px;
+  width: 500px;
+  border: 5px solid #000000;
+  margin: 20px auto;
+  border-radius: 5px;
+  transition: 0.3s;
+
+  & :hover {
+    width: 510px;
+    cursor: pointer;
+  }
+}
+
+.drawer {
+  padding: 50px;
+}
+
+.drawer_handle {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  border:3px solid #000000;
+  background-color: #c151f5;
+  box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
+  margin: auto;
+}

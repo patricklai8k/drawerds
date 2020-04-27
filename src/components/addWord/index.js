@@ -1,14 +1,14 @@
 import React, { useContext } from 'react';
 import { WordsContext } from '../../WordsContext';
 
-let currentWord = '';
+let tempWord = '';
 
 const addWord = (words, setWords) => () => {
-  setWords([...words, currentWord]);
+  setWords([...words, tempWord]);
 }
 
-const setCurrentWord = newWord => {
-  currentWord = newWord;
+const setTempWord = newWord => {
+  tempWord = newWord;
 }
 
 const AddWord = () => {
@@ -17,7 +17,7 @@ const AddWord = () => {
     <div>
       {words}
       <button onClick={addWord(words, setWords)}>test</button>
-      <input onChange={e => setCurrentWord(e.target.value)}></input>
+      <input onChange={e => setTempWord(e.target.value)}></input>
     </div>
   );
 };

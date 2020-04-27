@@ -6,15 +6,20 @@ import { WordsContext } from './WordsContext';
 
 const App = () => {
   const [words, setWords] = useState([]);
+  const [currentWord, setCurrentWord] = useState(null);
 
-  const ProviderValue = useMemo(() => ({ words, setWords }), [words, setWords]);
-
+  const wordsValue = useMemo(() => ({ words, setWords }), [words, setWords]);
+  console.log('wordsValue=', wordsValue);
   return (
-    <WordsContext.Provider value={ProviderValue}>
+    <WordsContext.Provider value={{ ...wordsValue, currentWord, setCurrentWord}}>
       <div className="App">
         <h1>Drawerds.</h1>
         <AddWord/>
-        <Drawer/>
+        <div className="Dresser">
+          <Drawer/>
+          <Drawer/>
+          <Drawer/>
+        </div>
       </div>
     </WordsContext.Provider>
   );

@@ -20,12 +20,6 @@
   pointer-events: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .Logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -37,12 +31,11 @@
   color: white;
 }
 
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.BlurBg {
+  position:absolute;
+  top : 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  filter: blur(2px);
 }

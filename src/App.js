@@ -14,7 +14,6 @@ const App = () => {
   const ContextValue = {
     ...wordsValue, currentWord, setCurrentWord, showWord, setShowWord
   }
-  console.log('wordsValue=', wordsValue);
   return (
     <WordsContext.Provider value={ContextValue}>
       <div className="App">

@@ -4,20 +4,24 @@ import classNames from 'classnames';
 
 import './styles.scss'
 
+const onOuterClick = (setShowWord, setHide) => () => {
+  setHide(true)
+  setTimeout(() => setShowWord(false), 1000);
+};
+
 const DrawnWord = () => {
   const { currentWord, setShowWord } = useContext(WordsContext);
   const [hide, setHide] = useState(true);
-  const shownWordClass = classNames({ 
+  const shownWordClass = classNames({
     shownWord: true, shownWordHide: hide, shownWordShow: !hide
   })
 
   useEffect(() => {
-    console.log('useEffect');
     setTimeout(setHide(false), 10);
   }, []);
 
   return (
-    <div className="shownWordContainer" onClick={() => setShowWord(false)}>
+    <div className="shownWordContainer" onClick={onOuterClick(setShowWord, setHide)}>
       <div className={shownWordClass}>
         <div className="shownWordContent">
           {currentWord}

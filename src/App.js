@@ -1,5 +1,4 @@
 import React, { useState, useMemo } from 'react';
-import FadeIn from 'react-fade-in';
 
 import './App.css';
 import Drawer from './components/drawer';
@@ -19,9 +18,9 @@ const App = () => {
   return (
     <WordsContext.Provider value={ContextValue}>
       <div className="App">
-        <DrawnWord/>
+        {showWord && <DrawnWord/>}
         <div className={showWord && 'BlurBg'}>
-          <h1>Drawerds.</h1>
+          <h1 className="Header">Drawerds.</h1>
           <AddWord/>
           <div className="Dresser">
             <Drawer/>

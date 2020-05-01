@@ -6,6 +6,11 @@
   padding: 40px;
 }
 
+.Header {
+  font-family: serif;
+  font-size: 40px;
+}
+
 .Dresser {
   padding: 20px;
   border-radius: 5px;
@@ -33,9 +38,12 @@
 
 .BlurBg {
   position:absolute;
-  top : 0;
   left: 0;
   width: 100%;
   height: 100%;
   filter: blur(2px);
+}
+
+.FadeClass {
+  z-index: 1;
 }
